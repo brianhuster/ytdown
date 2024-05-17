@@ -58,5 +58,7 @@ if stream:
             
             st.success('Successfully get download link!')
             st.markdown(get_download_link(file_path), unsafe_allow_html=True)
+            
+            os.remove(file_path)
         except Exception as e:
             st.error(f'Error: {e}')
